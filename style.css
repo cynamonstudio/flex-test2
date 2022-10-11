@@ -1,0 +1,175 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hmtl{
+    font-size: 16px;
+}
+
+body{
+    background-color:white
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-all{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    padding: 1rem;
+}
+
+[class^="box-"]{
+background-color: rgb(0, 255, 0);
+width: 33.33%;
+padding: 3rem;
+transition: all .5s ease;
+display: flex;
+flex-direction: column;
+opacity: 0.0;
+transform: translateX(-200px);
+}
+
+.box-1{
+    background-color: #e28525;
+    border-radius: .7rem  0  0 .7rem ;
+}
+
+.box-2{
+    background-color: #016972;
+}
+
+.box-3{
+    background-color: #00403f;
+    border-radius: 0  .7rem  .7rem 0 ;
+}
+
+
+
+.box-lift{
+    transform: translateY(-50px);
+    transition: all .5s ease;
+}
+
+
+[class^="icon-"]{
+    width:100%;
+    height: 2.3rem;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 1.5rem;
+}
+
+.icon-1{
+    background-image: url("icon-sedans.svg");
+}
+
+.icon-2{
+    background-image: url("icon-suvs.svg");
+}
+
+.icon-3{
+    background-image: url("icon-luxury.svg");
+}
+
+
+.header-txt{
+    font-family: 'Bebas Neue';
+    color: #eff6ef;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.txt{
+    font-family: 'DM Sans';
+    color: #eff6ef;
+    line-height: 1.3rem;
+    letter-spacing: .3px;
+    font-size: .8rem;
+    margin-bottom: 3rem;
+}
+
+
+[class^="button-txt"]{
+    font-family: 'DM Sans';
+    font-size: .8rem;
+    color:#eff6ef;
+    line-height: 1.3rem;
+    letter-spacing: .3px;
+    padding: .7rem;
+    text-align: center;
+    z-index: 100;
+    position: relative;
+}
+
+.button{
+    margin-top: auto;
+    position: relative;
+    box-shadow:0px 0px 1px 1px #eff6ef inset;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor:pointer;
+}
+.button-fill{
+    background-color: #eff6ef;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 101%;
+    z-index: 0;
+    transition: all .5s ease;
+}
+
+.fill-full{
+    width: 100%;
+    transition: all .5s ease;
+}
+
+@media only screen and (max-width:700px){
+
+    .wrapper-all{
+    flex-direction: column;
+    max-width: 400px;
+    }
+
+    [class^="box-"]{
+ width: 100%;
+    }
+
+    .box-1{
+        border-radius: .7rem  .7rem 0 0;
+    }
+    
+    .box-3{
+        border-radius: 0 0 .7rem  .7rem  ;
+    }
+
+    .button-fill{
+        width: 100%;
+    }
+
+    #btn-txt-1{
+        color: #e28525 !important ;
+    } 
+    #btn-txt-2{
+        color:#016972 !important
+    } 
+    #btn-txt-3{
+      color: #00403f !important
+    } 
+
+
+}
